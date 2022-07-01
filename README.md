@@ -1,8 +1,8 @@
-# Galactic Calculator
+# Currency - Exchanger
 
 #### By _**Joe Roaden**_
 
-#### _An application used to generate your age around the universe. This projects utilizes ES6 classes, dependencies managed by npm, jest and webpack_
+#### _An application used to convert USD to a selection of other currencies utilizing the ExchangeRate-API_
 
 ## Technologies Used
 
@@ -18,7 +18,7 @@
 
 ## Description
 
-_A web application that takes the age from a user and calculates their age on different planets in the solar system_
+_A web application that takes USD and converts to a variety of other currencies_
 
 - [x] _This project's GitHub repo can be found at the following link_ [GitHub Pages](https://github.com/joeroaden/galactic-calc).
 
@@ -26,12 +26,12 @@ _A web application that takes the age from a user and calculates their age on di
 
 - _To properly view this project, please see the steps below on cloning from GitHub_
 
-1. Locate this projects GitHub Repository via [GitHub Pages](https://github.com/joeroaden/galactic-calc).
+1. Locate this projects GitHub Repository via [GitHub Pages](https://github.com/joeroaden/Currency-Exchanger).
 
 2. Within the terminal, navigate to the directory where you want to clone and save this project (Typically Desktop, but just be sure you do not clone into another project's directory)
 
 3. Once within your desired directory to save the clone, type the following in your terminal
-   _$ git clone https://github.com/joeroaden/galactic-calc_
+   _$ git clone https://github.com/joeroaden/Currency-Exchanger_
 
 4. Since this is a public repository, no credentials will be needed and you can now navigate into the directory
 
@@ -41,7 +41,13 @@ _A web application that takes the age from a user and calculates their age on di
 
 7. Acces the html page called index.html and you are ready to begin using the application once the UI is completed
 
-8. For additional information and help, here is a link to GitHub Docs that provides detailed explanations - https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
+8. A unique ExchnageRate API key is required to run this application - first navigate to _https://www.exchangerate-api.com/_ and add email address to get a free key and create a free account.  *Note a free account is all that is needed to run this program
+
+9. Once your email is verified, your key will be activated. Place your key in an .env file at the top level of your directory utilizing this format "API_KEY={YOUR UNIQUE KEY}".  Please note there are no brackets, just your key
+
+10. After your unique key has been added to the .env file, you are ready to run this application
+
+x. For additional information and help, here is a link to GitHub Docs that provides detailed explanations - https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository
 
 ## Known Bugs
 
@@ -69,4 +75,4 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.\_
 
-Copyright (c) June 24th, 2022 Joe Roaden
+Copyright (c) July 1st, 2022 Joe Roaden
