@@ -23,7 +23,19 @@ function displayErrors(error) {
 $(document).ready(function () {
   $("#getExchange").click(function () {
     let amount = $("#amount").val();
+    let country = $("#country").val();
+    console.log(country);
     clearFields();
-    
-  }
-}
+    CurrencyService.getExchange(amount, country)
+      .then(function (currencyResponse) {
+        if (currencyResponse instanceof Error) {
+          throw Error (`Exchange Rate API error: ${currencyResponse.message}`);
+        }
+        let arabEmiratesResponse = currencyResponse.conversion_result;
+        displayCurrencies(arabEmiratesResponse);
+      })
+      .catch(function(error) {
+        displayErrors(error.message);
+      });
+  });
+});
