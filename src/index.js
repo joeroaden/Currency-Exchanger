@@ -8,12 +8,9 @@ function clearFields () {
   $('#amount').val("");
 }
 
-function displayCurrencies (arabEmirates, afghan, albanian, armenian, netherlands) {
-  $(".showArabEmirates").text(`Arab Emirates (AED): ${arabEmirates} `);
-  $(".showAfghan").text(`Afghan (AFN): ${afghan}`);
-  $(".showAlbanian").text(`Albanian (ALL): ${albanian}`);
-  $(".showArmenian").text(`Armenian (AMD): ${armenian}`);
-  $(".showNetherlands").text(`Netherlands (ANG): ${netherlands}`);
+function displayCurrencies (currencyResponse) {
+  $(".showCurrency").text(`Your Conversion is:  $${currencyResponse} `);
+
 }
 
 function displayErrors(error) {
@@ -31,8 +28,8 @@ $(document).ready(function () {
         if (currencyResponse instanceof Error) {
           throw Error (`Exchange Rate API error: ${currencyResponse.message}`);
         }
-        let arabEmiratesResponse = currencyResponse.conversion_result;
-        displayCurrencies(arabEmiratesResponse);
+        let conversionResponse = currencyResponse.conversion_result;
+        displayCurrencies(conversionResponse);
       })
       .catch(function(error) {
         displayErrors(error.message);
