@@ -17,16 +17,24 @@ function displayErrors(error) {
   $('.showErrors').text(`${error}`);
 }
 
+function checkValue(value) {
+  if(value==="other")
+    alert("This currency is not supported");
+  else
+    return;
+}
+
 $(document).ready(function () {
   $("#getExchange").click(function () {
     let amount = $("#amount").val();
     let country = $("#country").val();
     console.log(country);
     clearFields();
+    checkValue();
     CurrencyService.getExchange(amount, country)
       .then(function (currencyResponse) {
         if (currencyResponse instanceof Error) {
-          throw Error (`Exchange Rate API error: ${currencyResponse.message}`);
+          throw Error (`Exchange Rate API error: This currency is not supported ${currencyResponse.message}`);
         }
         let conversionResponse = currencyResponse.conversion_result;
         displayCurrencies(conversionResponse);

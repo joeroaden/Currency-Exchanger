@@ -13,12 +13,16 @@
     <input id ="amount" type="number">
     <h4>Choose a Country</h4>
             <select class = "form-control" id="country">
+              <option selected disabled hidden style='display: none' value=''></option>
               <option value="AED">Arab Emirates</option>
               <option value="AFN">Afghanistan</option>
               <option value="ALL">Albania</option>
               <option value="AMD">Armenian</option>
               <option value="ANG">Netherlands</option>
-            </select>    
+            </select>  
+            <label for="other">Enter your own currency:</label>
+            <input id="other" type="other">
+            <hr>
     <button class ="btn-success" id ="getExchange">$$$Get Exchange Rates!</button>
     <div class="showErrors"></div>
     <div class ="showCurrency"></div>
