@@ -18,7 +18,8 @@ function displayErrors(error) {
 }
 
 function checkValue(value) {
-  if(value==="other")
+  let other = $("#other").val();
+  if(value === other)
     alert("This currency is not supported");
   else
     return;
